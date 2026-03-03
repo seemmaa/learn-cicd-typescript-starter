@@ -24,10 +24,11 @@ jobs:
       - name: Run tests
         run: npm run test -- --coverage
 
+  style:
      name : style
-    runs-on: ubuntu-latest
+     runs-on: ubuntu-latest
 
-    steps:
+     steps:
       - name: Check out code
         uses: actions/checkout@v4
 
