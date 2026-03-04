@@ -1,6 +1,7 @@
 import js from "@eslint/js";
 import globals from "globals";
 import tseslint from "typescript-eslint";
+import pluginSecurity from "eslint-plugin-security";
 
 export default tseslint.config(
   
@@ -25,4 +26,13 @@ export default tseslint.config(
       "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }]
     }
   },
+  {
+    files: ["**/*.ts"],
+    extends: [
+      "plugin:security/recommended"
+    ],
+    rules: {
+      "security/detect-object-injection": "off"
+    }
+  }
 );
