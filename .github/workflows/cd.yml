@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 jobs:
-  build-and-push:
+  Deploy:
     name: Build and Push to GCP
     runs-on: ubuntu-latest
     steps:
